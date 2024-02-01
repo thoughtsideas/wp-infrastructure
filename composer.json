@@ -29,7 +29,7 @@
     },
     "require-dev": {
         "captainhook/captainhook": "^5.21",
-        "ergebnis/composer-normalize": "^2.41",
+        "ergebnis/composer-normalize": "^2.42",
         "madewithlove/license-checker": "^1.5",
         "phly/keep-a-changelog": "^2.12",
         "roave/security-advisories": "dev-latest"
