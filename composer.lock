@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "04475754dd28bf75d84b806ceb6020cd",
+    "content-hash": "826abd6421273cee4be13f0bb37f640a",
     "packages": [
         {
             "name": "captainhook/hook-installer",
@@ -57,16 +57,16 @@
     "packages-dev": [
         {
             "name": "captainhook/captainhook",
-            "version": "5.24.1",
+            "version": "5.25.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/captainhookphp/captainhook.git",
-                "reference": "1e56452fd7a7e486e5955ab72dc9ea34bb52a184"
+                "reference": "e2a35b23daf9ed317b5faca1c667cb048b30cd60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/captainhookphp/captainhook/zipball/1e56452fd7a7e486e5955ab72dc9ea34bb52a184",
-                "reference": "1e56452fd7a7e486e5955ab72dc9ea34bb52a184",
+                "url": "https://api.github.com/repos/captainhookphp/captainhook/zipball/e2a35b23daf9ed317b5faca1c667cb048b30cd60",
+                "reference": "e2a35b23daf9ed317b5faca1c667cb048b30cd60",
                 "shasum": ""
             },
             "require": {
@@ -77,7 +77,7 @@
                 "php": ">=8.0",
                 "sebastianfeldmann/camino": "^0.9.2",
                 "sebastianfeldmann/cli": "^3.3",
-                "sebastianfeldmann/git": "^3.10",
+                "sebastianfeldmann/git": "^3.13",
                 "symfony/console": "^2.7 || ^3.0 || ^4.0 || ^5.0 || ^6.0 || ^7.0",
                 "symfony/filesystem": "^2.7 || ^3.0 || ^4.0 || ^5.0 || ^6.0 || ^7.0",
                 "symfony/process": "^2.7 || ^3.0 || ^4.0 || ^5.0 || ^6.0 || ^7.0"
@@ -129,7 +129,7 @@
             ],
             "support": {
                 "issues": "https://github.com/captainhookphp/captainhook/issues",
-                "source": "https://github.com/captainhookphp/captainhook/tree/5.24.1"
+                "source": "https://github.com/captainhookphp/captainhook/tree/5.25.1"
             },
             "funding": [
                 {
@@ -137,7 +137,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-26T18:42:37+00:00"
+            "time": "2025-03-19T16:42:49+00:00"
         },
         {
             "name": "captainhook/secrets",
@@ -3547,16 +3547,16 @@
         },
         {
             "name": "sebastianfeldmann/git",
-            "version": "3.11.1",
+            "version": "3.13.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianfeldmann/git.git",
-                "reference": "96b9f384d45106f757df98a74c11b42b393ff18f"
+                "reference": "95c5fccbbf5e94ad86c459a73f0c2d2d2e776d98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianfeldmann/git/zipball/96b9f384d45106f757df98a74c11b42b393ff18f",
-                "reference": "96b9f384d45106f757df98a74c11b42b393ff18f",
+                "url": "https://api.github.com/repos/sebastianfeldmann/git/zipball/95c5fccbbf5e94ad86c459a73f0c2d2d2e776d98",
+                "reference": "95c5fccbbf5e94ad86c459a73f0c2d2d2e776d98",
                 "shasum": ""
             },
             "require": {
@@ -3597,7 +3597,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianfeldmann/git/issues",
-                "source": "https://github.com/sebastianfeldmann/git/tree/3.11.1"
+                "source": "https://github.com/sebastianfeldmann/git/tree/3.13.2"
             },
             "funding": [
                 {
@@ -3605,7 +3605,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-26T18:37:20+00:00"
+            "time": "2025-02-11T19:34:51+00:00"
         },
         {
             "name": "symfony/console",
@@ -4301,16 +4301,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v6.4.15",
+            "version": "v6.4.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "3cb242f059c14ae08591c5c4087d1fe443564392"
+                "reference": "7a1c12e87b08ec9c97abdd188c9b3f5a40e37fc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/3cb242f059c14ae08591c5c4087d1fe443564392",
-                "reference": "3cb242f059c14ae08591c5c4087d1fe443564392",
+                "url": "https://api.github.com/repos/symfony/process/zipball/7a1c12e87b08ec9c97abdd188c9b3f5a40e37fc3",
+                "reference": "7a1c12e87b08ec9c97abdd188c9b3f5a40e37fc3",
                 "shasum": ""
             },
             "require": {
@@ -4342,7 +4342,7 @@
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/process/tree/v6.4.15"
+                "source": "https://github.com/symfony/process/tree/v6.4.19"
             },
             "funding": [
                 {
@@ -4358,7 +4358,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-06T14:19:14+00:00"
+            "time": "2025-02-04T13:35:48+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -4612,6 +4612,6 @@
     "platform": {
         "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
     },
-    "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }
