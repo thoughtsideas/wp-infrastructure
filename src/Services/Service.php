@@ -18,6 +18,9 @@ abstract class Service
 {
     protected string $name;
 
+    /**
+     * @var non-empty-string
+     */
     protected string $hook;
 
     public function __construct(
@@ -31,6 +34,9 @@ abstract class Service
         return $this->name;
     }
 
+    /**
+     * @phpstan-return non-empty-string
+     */
     public function getHook(): string
     {
         return $this->hook;
