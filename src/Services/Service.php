@@ -7,7 +7,7 @@
  * @author    Thoughts & Ideas <hello@thoughtsandideas.uk>
  * @link      https://www.thoughtsandideas.uk/
  * @license   MIT
- * @copyright 2022-2024 Thoughts & Ideas Limited.
+ * @copyright 2022-2026 Thoughts & Ideas Limited.
  */
 
 declare(strict_types=1);

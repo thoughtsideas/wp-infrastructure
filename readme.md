@@ -41,5 +41,5 @@ Thoughts & Ideas - [hello@thoughtsandideas.uk](hello@thoughtsandideas.uk)
 
 ## Copyright and License
 
-© 2022-2025 Thoughts & Ideas Limited and licensed for use under the terms of the
+© 2022-2026 Thoughts & Ideas Limited and licensed for use under the terms of the
 MIT License (MIT). Please see [LICENSE](https://github.com/thoughtsideas/wp-infrastructure/blob/trunk/license.txt) for more information.
