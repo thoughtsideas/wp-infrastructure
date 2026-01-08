@@ -11,12 +11,12 @@
             "version": "1.0.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/captainhookphp/hook-installer.git",
+                "url": "https://github.com/captainhook-git/hook-installer.git",
                 "reference": "3308a9152727af4e3d1c7b63ca219d6938b702b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/captainhookphp/hook-installer/zipball/3308a9152727af4e3d1c7b63ca219d6938b702b8",
+                "url": "https://api.github.com/repos/captainhook-git/hook-installer/zipball/3308a9152727af4e3d1c7b63ca219d6938b702b8",
                 "reference": "3308a9152727af4e3d1c7b63ca219d6938b702b8",
                 "shasum": ""
             },
@@ -60,12 +60,12 @@
             "version": "5.24.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/captainhookphp/captainhook.git",
+                "url": "https://github.com/captainhook-git/captainhook.git",
                 "reference": "1e56452fd7a7e486e5955ab72dc9ea34bb52a184"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/captainhookphp/captainhook/zipball/1e56452fd7a7e486e5955ab72dc9ea34bb52a184",
+                "url": "https://api.github.com/repos/captainhook-git/captainhook/zipball/1e56452fd7a7e486e5955ab72dc9ea34bb52a184",
                 "reference": "1e56452fd7a7e486e5955ab72dc9ea34bb52a184",
                 "shasum": ""
             },
@@ -144,12 +144,12 @@
             "version": "0.9.6",
             "source": {
                 "type": "git",
-                "url": "https://github.com/captainhookphp/secrets.git",
+                "url": "https://github.com/captainhook-git/secrets.git",
                 "reference": "0232c67019e11c4bee4ee9bfec9575b67e0854e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/captainhookphp/secrets/zipball/0232c67019e11c4bee4ee9bfec9575b67e0854e5",
+                "url": "https://api.github.com/repos/captainhook-git/secrets/zipball/0232c67019e11c4bee4ee9bfec9575b67e0854e5",
                 "reference": "0232c67019e11c4bee4ee9bfec9575b67e0854e5",
                 "shasum": ""
             },
@@ -4613,5 +4613,5 @@
         "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
