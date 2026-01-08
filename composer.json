@@ -73,6 +73,12 @@
         "post-update-cmd": [
             "@composer run tools"
         ],
+        "fix": [
+            "@composer fix:standards"
+        ],
+        "fix:standards": [
+            "./tools/vendor/bin/phpcbf"
+        ],
         "test": [
             "@composer run test:license",
             "@composer run test:security",
