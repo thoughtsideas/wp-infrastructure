@@ -57,7 +57,7 @@ class ServiceProviderTest extends TestCase
      * Service is initialized.
      *
      * @test
-     * @covers \ThoughtsIdeas\Wordpress\Infrastructure\Services\ServiceProvider::initializeServiceCollection
+     * @covers \ThoughtsIdeas\Wordpress\Infrastructure\Services\ServiceProvider::initializeCollection
      * @covers \ThoughtsIdeas\Wordpress\Infrastructure\Services\ServiceProvider::initializeService
      *
      * @return void
@@ -68,7 +68,7 @@ class ServiceProviderTest extends TestCase
             hook_prefix: 'ThoughtsIdeas.Plugin'
         );
 
-        $service_provider->initializeServiceCollection();
+        $service_provider->initializeCollection();
 
         $act = $service_provider->getServiceContainer();
 
@@ -92,7 +92,7 @@ class ServiceProviderTest extends TestCase
             hook_prefix: 'ThoughtsIdeas.Plugin'
         );
 
-        $service_provider->initializeServiceCollection();
+        $service_provider->initializeCollection();
         $act = $service_provider->getServiceContainer();
 
         self::assertInstanceOf(

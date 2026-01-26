@@ -46,7 +46,7 @@ abstract class ServiceProvider implements Provider
         return $this->service_container;
     }
 
-    public function initializeServiceCollection(): void
+    public function initializeCollection(): void
     {
         foreach ( $this->service_collection as $service_class ) {
             /**
