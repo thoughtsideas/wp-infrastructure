@@ -74,11 +74,7 @@ abstract class ServiceLocator implements Locator
             $provider = $this->initializeProvider( $provider_class );
             $this->provider_container[ $provider::class ] = $provider;
 
-            if ( ! ($this->provider_container[ $provider::class ] instanceof ServiceProvider) ) {
-                    continue;
-            }
-
-            $this->provider_container[ $provider::class ]->initializeServiceCollection();
+            $this->provider_container[ $provider::class ]->initializeCollection();
         }
     }
 
@@ -91,6 +87,16 @@ abstract class ServiceLocator implements Locator
         $return = new $service_provider(
             $this->getHook()
         );
+
+        if ( ! ( $return instanceof ServiceProvider ) ) {
+            throw new \TypeError(
+                sprintf(
+                    'Service Provider %s must be an instance of ServiceProvider',
+                    $service_provider
+                )
+            );
+        }
+
         return $return;
     }
 }

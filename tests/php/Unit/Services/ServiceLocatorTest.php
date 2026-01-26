@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ThoughtsIdeas\Wordpress\Infrastructure\Tests\Unit\Services;
 
+use stdClass;
 use ThoughtsIdeas\Wordpress\Infrastructure\Services\Locator;
 use ThoughtsIdeas\Wordpress\Infrastructure\Services\ServiceProvider;
 use ThoughtsIdeas\Wordpress\Infrastructure\Tests\TestCase;
@@ -102,6 +103,25 @@ class ServiceLocatorTest extends TestCase
     }
 
     /**
+     * @covers \ThoughtsIdeas\Wordpress\Infrastructure\Services\ServiceLocator::bootstrap
+     */
+    public function testRegisteringOfHooks(): void
+    {
+        $instance = new DummyServiceLocator(
+            hook_prefix: 'ThoughtsIdeas'
+        );
+        $instance->bootstrap();
+
+        self::assertEquals(
+            10,
+            has_action(
+                'plugins_loaded',
+                [ $instance, 'initializeProviderCollection' ]
+            )
+        );
+    }
+
+    /**
      * Service Provider is initialized.
      *
      * @test
@@ -126,21 +146,20 @@ class ServiceLocatorTest extends TestCase
     }
 
     /**
-     * @covers \ThoughtsIdeas\Wordpress\Infrastructure\Services\ServiceLocator::bootstrap
+     * @covers \ThoughtsIdeas\Wordpress\Infrastructure\Services\ServiceLocator::initializeProvider
      */
-    public function testRegisteringOfHooks(): void
+    public function testIgnoreNonServiceProviders(): void
     {
-        $instance = new DummyServiceLocator(
+        $this->expectException( \TypeError::class );
+
+        $non_service_provider = new stdClass;
+
+        $service_locator = new DummyServiceLocator(
             hook_prefix: 'ThoughtsIdeas'
         );
-        $instance->bootstrap();
 
-        self::assertEquals(
-            10,
-            has_action(
-                'plugins_loaded',
-                [ $instance, 'initializeProviderCollection' ]
-            )
+        $act = $service_locator->initializeProvider(
+            service_provider: $non_service_provider::class
         );
     }
 }

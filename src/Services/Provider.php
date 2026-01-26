@@ -16,4 +16,5 @@ namespace ThoughtsIdeas\Wordpress\Infrastructure\Services;
 
 interface Provider
 {
+    public function initializeCollection(): void;
 }
