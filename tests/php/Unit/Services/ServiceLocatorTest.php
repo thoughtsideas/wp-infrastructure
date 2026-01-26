@@ -124,4 +124,23 @@ class ServiceLocatorTest extends TestCase
             actual: $act
         );
     }
+
+    /**
+     * @covers \ThoughtsIdeas\Wordpress\Infrastructure\Services\ServiceLocator::bootstrap
+     */
+    public function testRegisteringOfHooks(): void
+    {
+        $instance = new DummyServiceLocator(
+            hook_prefix: 'ThoughtsIdeas'
+        );
+        $instance->bootstrap();
+
+        self::assertEquals(
+            10,
+            has_action(
+                'plugins_loaded',
+                [ $instance, 'initializeProviderCollection' ]
+            )
+        );
+    }
 }
