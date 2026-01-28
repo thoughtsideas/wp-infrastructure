@@ -1,29 +1,29 @@
 <?php
 
 /**
- * Interface: Service
+ * Dummy: Invalid Serivce
  *
  * @package   ThoughtsIdeas\Wordpress\Infrastructure
  * @author    Thoughts & Ideas <hello@thoughtsandideas.uk>
  * @link      https://www.thoughtsandideas.uk/
  * @license   MIT
- * @copyright 2022-2026 Thoughts & Ideas Limited.
+ * @copyright 2026 Thoughts & Ideas Limited.
  */
 
 declare(strict_types=1);
 
-namespace ThoughtsIdeas\Wordpress\Infrastructure\Services;
+namespace ThoughtsIdeas\Wordpress\Infrastructure\Tests\Unit\Services;
 
-abstract class Service
+use ThoughtsIdeas\Wordpress\Infrastructure\Services\Registrable;
+
+final class DummyInvalidService implements Registrable
 {
-    protected string $name;
+    protected string $name = 'DummyService';
 
     /**
      * @var non-empty-string
      */
     protected string $hook;
-
-    abstract public function register(): void;
 
     public function __construct(
         string $hook_prefix
@@ -42,5 +42,10 @@ abstract class Service
     public function getHook(): string
     {
         return $this->hook;
+    }
+
+    public function register(): void
+    {
+        // Add WordPress Hooks here.
     }
 }

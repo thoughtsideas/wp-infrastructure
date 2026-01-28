@@ -54,11 +54,6 @@ abstract class ServiceProvider implements Provider
              */
             $service = $this->initializeService( $service_class );
             $this->service_container[ $service::class ] = $service;
-
-            if ( !($this->service_container[ $service::class ] instanceof Registrable) ) {
-                continue;
-            }
-
             $this->service_container[ $service::class ]->register();
         }
     }
@@ -71,6 +66,15 @@ abstract class ServiceProvider implements Provider
         $return = new $service(
             hook_prefix: "{$this->hook_prefix}.{$this->identifier}"
         );
+
+        if ( ! ( $return instanceof Service ) ) {
+            throw new \TypeError(
+                sprintf(
+                    'Service %s must be an instance of Service',
+                    $service
+                )
+            );
+        }
 
         return $return;
     }
