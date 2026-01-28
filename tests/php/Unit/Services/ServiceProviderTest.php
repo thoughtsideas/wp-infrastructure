@@ -100,4 +100,19 @@ class ServiceProviderTest extends TestCase
             actual: $act['ThoughtsIdeas\Wordpress\Infrastructure\Tests\Unit\Services\DummyService']
         );
     }
+
+    /**
+     * @covers \ThoughtsIdeas\Wordpress\Infrastructure\Services\ServiceProvider::initializeService
+     */
+    public function testIgnoreNonService(): void
+    {
+        $this->expectException( \TypeError::class );
+
+        $service_provider = new DummyInvalidServiceProvider(
+            hook_prefix: 'ThoughtsIdeas.Plugin'
+        );
+
+        $act = $service_provider->initializeCollection();
+    }
+
 }
