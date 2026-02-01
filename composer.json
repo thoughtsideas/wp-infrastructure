@@ -103,6 +103,7 @@
         ],
         "test:static:phpstan": "./tools/vendor/bin/phpstan analyse --memory-limit 1G",
         "test:unit": "./tools/vendor/bin/phpunit --testsuite unit",
+        "test:unit-coverage": "./tools/vendor/bin/phpunit --coverage-html='tests/php/Coverage'",
         "tools": [
             "@composer install --working-dir=tools",
             "@composer run post-install-cmd --working-dir=tools"
