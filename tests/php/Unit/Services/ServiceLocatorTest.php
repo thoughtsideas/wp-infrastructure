@@ -135,13 +135,13 @@ class ServiceLocatorTest extends TestCase
             hook_prefix: 'ThoughtsIdeas'
         );
 
-        $act = $service_locator->initializeProvider(
-            service_provider: DummyServiceProvider::class
-        );
+        $service_locator->initializeProviderCollection();
+
+        $act = $service_locator->getProviderCollection();
 
         self::assertInstanceOf(
-            expected: DummyServiceProvider::class,
-            actual: $act
+            expected: ServiceProvider::class,
+            actual: $act['ThoughtsIdeas\Wordpress\Infrastructure\Tests\Unit\Services\DummyServiceProvider']
         );
     }
 
@@ -152,14 +152,10 @@ class ServiceLocatorTest extends TestCase
     {
         $this->expectException( \TypeError::class );
 
-        $non_service_provider = new stdClass;
-
-        $service_locator = new DummyServiceLocator(
+        $service_locator = new DummyInvalidServiceLocator(
             hook_prefix: 'ThoughtsIdeas'
         );
 
-        $act = $service_locator->initializeProvider(
-            service_provider: $non_service_provider::class
-        );
+        $act = $service_locator->initializeProviderCollection();
     }
 }

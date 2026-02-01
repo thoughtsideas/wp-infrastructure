@@ -78,7 +78,7 @@ abstract class ServiceLocator implements Locator
         }
     }
 
-    public function initializeProvider(string $service_provider): ServiceProvider
+    private function initializeProvider(string $service_provider): ServiceProvider
     {
 
         /**

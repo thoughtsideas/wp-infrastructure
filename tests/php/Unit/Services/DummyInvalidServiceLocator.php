@@ -17,7 +17,7 @@ namespace ThoughtsIdeas\Wordpress\Infrastructure\Tests\Unit\Services;
 use ThoughtsIdeas\Wordpress\Infrastructure\Main;
 use ThoughtsIdeas\Wordpress\Infrastructure\Services\ServiceLocator;
 
-final class DummyServiceLocator extends ServiceLocator implements Main
+final class DummyInvalidServiceLocator extends ServiceLocator implements Main
 {
     protected string $identifier = 'Plugin';
 
@@ -27,6 +27,6 @@ final class DummyServiceLocator extends ServiceLocator implements Main
      * @var array<string>
      */
     protected array $provider_collection = [
-        DummyServiceProvider::class,
+        DummyInvalidServiceProvider::class,
     ];
 }
