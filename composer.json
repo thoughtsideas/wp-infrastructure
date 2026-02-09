@@ -28,7 +28,7 @@
         "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
     },
     "require-dev": {
-        "captainhook/captainhook": "^5.27.5",
+        "captainhook/captainhook": "^5.28.0",
         "captainhook/hook-installer": "^1.0.4",
         "ergebnis/composer-normalize": "^2.49",
         "madewithlove/license-checker": "^1.5",
