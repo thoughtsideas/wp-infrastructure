@@ -30,7 +30,7 @@
     "require-dev": {
         "captainhook/captainhook": "^5.28.0",
         "captainhook/hook-installer": "^1.0.4",
-        "ergebnis/composer-normalize": "^2.49",
+        "ergebnis/composer-normalize": "^2.50",
         "madewithlove/license-checker": "^1.5",
         "phly/keep-a-changelog": "^2.12",
         "roave/security-advisories": "dev-latest"
