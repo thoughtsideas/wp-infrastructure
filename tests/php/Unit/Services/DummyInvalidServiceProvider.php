@@ -26,4 +26,10 @@ final class DummyInvalidServiceProvider extends ServiceProvider
     protected array $service_collection = [
         DummyInvalidService::class,
     ];
+
+    public function __construct(
+        string $hook_prefix
+    ) {
+        $this->hook_prefix = $hook_prefix;
+    }
 }

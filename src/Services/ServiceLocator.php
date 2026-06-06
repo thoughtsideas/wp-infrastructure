@@ -81,16 +81,13 @@ abstract class ServiceLocator implements Locator
     public function initializeProvider(string $service_provider): ServiceProvider
     {
 
-        /**
-         * @var ServiceProvider $return
-         */
         $return = new $service_provider(
             $this->getHook()
         );
 
         if ( ! ( $return instanceof ServiceProvider ) ) {
             throw new \TypeError(
-                sprintf(
+                \sprintf(
                     'Service Provider %s must be an instance of ServiceProvider',
                     $service_provider
                 )
