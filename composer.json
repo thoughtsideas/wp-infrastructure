@@ -2,6 +2,7 @@
     "name": "thoughtsideas/wp-infrastructure",
     "description": "A collection of contracts to aid the development of WordPress add-ons.",
     "license": "MIT",
+    "type": "library",
     "keywords": [
         "wordpress"
     ],
@@ -28,12 +29,11 @@
         "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0"
     },
     "require-dev": {
-        "captainhook/captainhook": "^5.28.0",
+        "captainhook/captainhook": "^5.29.2",
         "captainhook/hook-installer": "^1.0.4",
-        "ergebnis/composer-normalize": "^2.50",
+        "ergebnis/composer-normalize": "^2.52",
         "madewithlove/license-checker": "^1.6",
-        "phly/keep-a-changelog": "^2.13.2",
-        "roave/security-advisories": "dev-latest"
+        "phly/keep-a-changelog": "^2.13.2"
     },
     "minimum-stability": "stable",
     "autoload": {
@@ -82,9 +82,9 @@
         "test": [
             "@composer run test:license",
             "@composer run test:security",
-            "@composer run test:unit",
             "@composer run test:lint",
-            "@composer run test:static"
+            "@composer run test:static ",
+            "@composer run test:unit"
         ],
         "test:license": "vendor/bin/license-checker check",
         "test:lint": [
@@ -97,11 +97,11 @@
         ],
         "test:lint:php": "./tools/vendor/bin/parallel-lint ./src",
         "test:lint:validate": "@composer validate --ansi --strict",
-        "test:security": "@composer audit --ansi",
+        "test:security": "@composer audit --ansi --locked",
         "test:static": [
             "@composer run test:static:phpstan"
         ],
-        "test:static:phpstan": "./tools/vendor/bin/phpstan analyse --memory-limit 1G",
+        "test:static:phpstan": "./tools/vendor/bin/phpstan analyse --memory-limit 4G",
         "test:unit": "./tools/vendor/bin/phpunit --testsuite unit",
         "tools": [
             "@composer install --working-dir=tools",

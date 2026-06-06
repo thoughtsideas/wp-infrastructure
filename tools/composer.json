@@ -1,18 +1,26 @@
 {
     "name": "thoughtsideas/tools",
-    "type": "metapackage",
-    "license": "MIT",
     "description": "Development tools.",
-    "minimum-stability": "stable",
+    "license": "MIT",
+    "type": "metapackage",
     "require": {
-        "thoughtsideas/dev-tools-wp": "dev-trunk@dev",
-        "thoughtsideas/dev-tools-php": "dev-trunk@dev",
-        "phpcompatibility/php-compatibility": "dev-develop as 9.99.99@dev"
+        "ergebnis/composer-normalize": "^2.52",
+        "phpcompatibility/php-compatibility": "10.0.0-alpha1@dev",
+        "vatu/dev-tools": "dev-trunk@dev"
     },
+    "minimum-stability": "stable",
     "config": {
         "allow-plugins": {
+            "composer/installers": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
+            "ergebnis/composer-normalize": true,
             "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "composer-normalize": {
+            "indent-size": 4,
+            "indent-style": "space"
         }
     }
 }

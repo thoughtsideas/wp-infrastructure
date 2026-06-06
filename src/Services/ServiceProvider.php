@@ -60,6 +60,7 @@ abstract class ServiceProvider implements Provider
 
     private function initializeService(string $service): Service
     {
+
         /**
          * @var Service $return
          */
@@ -67,14 +68,14 @@ abstract class ServiceProvider implements Provider
             hook_prefix: "{$this->hook_prefix}.{$this->identifier}"
         );
 
-        if ( ! ( $return instanceof Service ) ) {
-            throw new \TypeError(
-                sprintf(
-                    'Service %s must be an instance of Service',
-                    $service
-                )
-            );
-        }
+        // if ( ! ( $service instanceof Service ) ) {
+        //     throw new \TypeError(
+        //         \sprintf(
+        //             'Service %s must be an instance of Service',
+        //             $service
+        //         )
+        //     );
+        // }
 
         return $return;
     }
