@@ -1,0 +1,47 @@
+<?php
+/**
+ * Generated stub declarations for WordPress.
+ * @see https://wordpress.org
+ * @see https://github.com/php-stubs/wordpress-stubs
+ */
+
+namespace {
+    /**
+     * Retrieves the translation of $text.
+     *
+     * If there is no translation, or the text domain isn't loaded, the original text is returned.
+     *
+     * @since 2.1.0
+     *
+     * @param string $text   Text to translate.
+     * @param string $domain Optional. Text domain. Unique identifier for retrieving translated strings.
+     *                       Default 'default'.
+     * @return string Translated text.
+     */
+    function __($text, $domain = 'default')
+    {
+    }
+    /**
+     * Adds a callback function to an action hook.
+     *
+     * Actions are the hooks that the WordPress core launches at specific points
+     * during execution, or when specific events occur. Plugins can specify that
+     * one or more of its PHP functions are executed at these points, using the
+     * Action API.
+     *
+     * @since 1.2.0
+     *
+     * @param string   $hook_name       The name of the action to add the callback to.
+     * @param callable $callback        The callback to be run when the action is called.
+     * @param int      $priority        Optional. Used to specify the order in which the functions
+     *                                  associated with a particular action are executed.
+     *                                  Lower numbers correspond with earlier execution,
+     *                                  and functions with the same priority are executed
+     *                                  in the order in which they were added to the action. Default 10.
+     * @param int      $accepted_args   Optional. The number of arguments the function accepts. Default 1.
+     * @return true Always returns true.
+     */
+    function add_action($hook_name, $callback, $priority = 10, $accepted_args = 1)
+    {
+    }
+}

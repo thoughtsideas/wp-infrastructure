@@ -9,3 +9,6 @@ parameters:
 
   paths:
     - src/
+
+  scanFiles:
+    - stubs/Wordpress.stub
