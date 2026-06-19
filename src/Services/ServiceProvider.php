@@ -58,6 +58,20 @@ abstract class ServiceProvider implements Provider
         }
     }
 
+    /**
+     * @deprecated since 0.3.0, use initializeCollection() instead
+     * @codeCoverageIgnore
+     */
+    public function initializeServiceCollection(): void
+    {
+        trigger_error(
+            "Method initializeServiceCollection() is deprecated since 0.3.0 and will be removed in 1.0.0 Use initializeCollection() instead.",
+            E_USER_DEPRECATED
+        );
+
+        $this->initializeCollection();
+    }
+
     private function initializeService(string $service): Service
     {
 
