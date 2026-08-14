@@ -31,7 +31,7 @@
     },
     "require-dev": {
         "captainhook/captainhook": "^5.29.2",
-        "captainhook/hook-installer": "^1.0.4",
+        "captainhook/hook-installer": "^1.0.5",
         "ergebnis/composer-normalize": "^2.52",
         "madewithlove/license-checker": "^1.6",
         "phly/keep-a-changelog": "^2.13.2"
